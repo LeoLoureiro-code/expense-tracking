@@ -6,7 +6,7 @@ const Balance = (props) =>{
         <div>
             <h1 className='title'>Expense Tracker</h1>
             <p className= 'balance-title'>YOUR BALANCE</p>
-            <p className = 'balance'>$0.00</p>
+            <p className = 'balance'>${props.balance}</p>
         </div>
     )
 }

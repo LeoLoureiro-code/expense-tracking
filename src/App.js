@@ -7,25 +7,27 @@ import './App.css';
 
 const App = () =>{
 
-  const initialvalues ={
+  const [value, setValue] = useState({
     text: '',
     quantity: '',
-    balance: '',
-    income: '',
-    expense: '',
+    balance: 0.00,
+    income: 0.00,
+    expense: 0.00,
     transactions: [],
-  }
-  console.log(initialvalues)
-  const [value, setValue] = useState(initialvalues)
+  })
 
   const handleChange = (e) =>{
-    setValue({...value, [e.target.name]: e.target.value})
+    setValue((state) =>({
+      ...state,
+      [e.target.name]: e.target.value
+      
+    }))
   }
-
+  
   return(
     <div className ='expense-tracker'>
-      <Balance balance ={value.balance} handleChange ={handleChange}/>
-      <Totals onChange ={handleChange}/>
+      <Balance balance ={value.balance}/>
+      <Totals income={value.income} expense ={value.expense} onChange ={handleChange}/>
       <History/>
       <Transactions text ={value.text} quantity={value.quantity} handleChange ={handleChange}/>
     </div>

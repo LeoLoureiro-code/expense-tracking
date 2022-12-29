@@ -1,0 +1,50 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+label{
+    margin-bottom: 0.5rem;
+}
+
+input[type=text], input[type=number]{
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(207, 207, 207);
+    font-size: 14px;
+    width: 80%;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+input[type= submit]{
+    color: white;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: rgb(5, 38, 109);
+    transition:  1s;
+    outline: none;
+    border: none;
+}
+
+input[type= submit]:hover{
+    cursor: pointer;
+    background-color: rgb(7, 84, 250);
+}

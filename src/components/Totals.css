@@ -1,0 +1,30 @@
+.income-expense-div{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.total-title{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.income{
+    color: green;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.expense{
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 700px) {
+    .income-expense-div{
+        width: 100%;
+    }
+}

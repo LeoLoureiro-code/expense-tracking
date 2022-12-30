@@ -10,7 +10,7 @@ const Totals = (props) =>{
             </div>
             <div>
                 <p className='total-title'>EXPENSE</p>
-                <p className='expense'>-${props.expense}</p>
+                <p className='expense'>-${props.expense * -1}</p>
             </div>
         </div>
     )

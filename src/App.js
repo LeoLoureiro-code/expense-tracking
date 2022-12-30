@@ -29,7 +29,7 @@ const App = () =>{
       setValue({
         ...value,
         balance: (parseInt(value.balance) + parseInt(value.quantity)),
-        income: parseInt(value.quantity),
+        income: (parseInt(value.income) + parseInt(value.quantity)),
         quantity: ''
       })
     }
@@ -37,7 +37,7 @@ const App = () =>{
       setValue({
         ...value,
         balance: (parseInt(value.balance) + parseInt(value.quantity)),
-        expense: parseInt(value.quantity),
+        expense: (parseInt(value.expense) + parseInt(value.quantity)),
         quantity: ''
       })
     }

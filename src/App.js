@@ -23,26 +23,49 @@ const App = () =>{
       
     }))
   }
+  
   const addIncomeExpense = (e) =>{
     e.preventDefault()
     if(value.quantity > 0){
+      addTransactionInfo()
       setValue({
         ...value,
         balance: (parseInt(value.balance) + parseInt(value.quantity)),
         income: (parseInt(value.income) + parseInt(value.quantity)),
-        quantity: ''
+        quantity: '',
+        text: '',
       })
     }
     if(value.quantity < 0){
+      addTransactionInfo()
       setValue({
         ...value,
         balance: (parseInt(value.balance) + parseInt(value.quantity)),
         expense: (parseInt(value.expense) + parseInt(value.quantity)),
-        quantity: ''
+        quantity: '',
+        text: '',
       })
     }
   }
-  console.log(value)
+  
+  const addTransactionInfo = () =>{
+    
+    let transactionObject = {
+      transactionText: value.text,
+      transactionQuantity: value.quantity,
+    }
+
+    let transaction = value.transactions
+
+    transaction.push(transactionObject)
+
+    console.log(transactionObject)
+    setValue({
+      ...value,
+      transactions: [...value.transactions, transaction]
+    })
+  }
+
   return(
     <div className ='expense-tracker'>
       <Balance balance ={value.balance}/>

@@ -70,7 +70,7 @@ const App = () =>{
     <div className ='expense-tracker'>
       <Balance balance ={value.balance}/>
       <Totals income={value.income} expense ={value.expense}/>
-      <History/>
+      <History transactions ={value.transactions}/>
       <Transactions text ={value.text} quantity={value.quantity} addIncomeExpense ={addIncomeExpense} handleChange ={handleChange}/>
     </div>
   )

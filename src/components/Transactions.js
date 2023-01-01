@@ -1,6 +1,7 @@
 import './Transactions.css'
 
 const Transactions = (props) =>{
+
     return(
         <div>
             <h2>Add new transaction</h2>
@@ -10,7 +11,7 @@ const Transactions = (props) =>{
             <input type='text' id='text' name='text' value={props.text} onChange={props.handleChange} placeholder='Transaction' autoComplete='off'/>
             <label htmlFor='amount'>Amount (negative-expense, positive-income)</label>
             <input type='number' id='amount' name='quantity' value={props.quantity} onChange={props.handleChange}  placeholder='How much?' autoComplete='off'/>
-            <input type='submit' value='Submit' onClick={props.addIncomeExpense}/>
+            <input type='submit' value='Submit' onClick={props.addTransactionInfo}/>
         </form>
         </div>
     )

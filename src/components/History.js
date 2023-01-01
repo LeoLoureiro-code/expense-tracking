@@ -2,10 +2,10 @@
 
 const History = (props) =>{
     const transactions = props.transactions
-
+    console.log(transactions)
     const listTransactions = transactions.map((transaction) =>
-        <li>
-            <span>{transaction.transactionText}</span> <span>{transaction.transactionQuantity}</span>
+        <li key={transactions.indexOf(transaction)}>
+            <span>{transaction.transactionText}</span> <span>${transaction.transactionQuantity}</span>
         </li>
     )
     return(
